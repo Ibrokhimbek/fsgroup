@@ -1,0 +1,131 @@
+.faq {
+  background-color: #f4f4f4;
+  position: relative;
+  padding: 100px 0;
+  overflow-x: hidden;
+}
+
+.faq::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 267px);
+  left: calc(50% + 190px);
+  width: 682px;
+  height: 539px;
+  background-image: url(../../images/bg__contact.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media() {
+    display: none;
+  }
+}
+
+.faq__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+
+  @include media() {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.faq__questions {
+  @include media() {
+    width: 100%;
+  }
+}
+
+.faq__wrapper .faq__questions > h2 {
+  margin-top: 20px;
+  max-width: 308px;
+  color: #1c1f35;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.faq__contact {
+  max-width: 448px;
+  background-color: $blue-bg;
+  padding: 42px 62px;
+  color: $light-font;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.accordion {
+  margin-top: 50px;
+
+  @include mobile() {
+    margin-top: 20px;
+  }
+}
+
+.accordion,
+.accordion-item,
+.accordion-header,
+.accordion-button {
+  background-color: transparent;
+}
+
+.accordion-item {
+  border: none;
+  margin: 15px 0;
+}
+
+.accordion-button {
+  color: #1c1f35;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 16px 0;
+  gap: 230px;
+
+  @include mobile() {
+    gap: unset;
+  }
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.accordion-button::after {
+  background-image: url(../../images/accordion__arrow-close.svg);
+  background-size: contain;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../../images/accordion__arrow-open.svg);
+  background-size: contain;
+  margin-bottom: 10px;
+}
+
+.accordion-body {
+  max-width: 569px;
+  color: #666c89;
+  font-family: "Krub", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 151.523%;
+  padding: 10px 0;
+}

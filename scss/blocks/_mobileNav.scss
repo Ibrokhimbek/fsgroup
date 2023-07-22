@@ -1,0 +1,90 @@
+.mobile__nav {
+  background-color: #091242;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  @include media(0, 1024px) {
+    display: block;
+  }
+}
+
+.mobile__nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+
+  @include mobile() {
+    padding: 20px 10px;
+  }
+}
+
+.hb {
+  width: 50px;
+}
+
+.mobile__nav .mobile__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color:  #0912428e;
+  backdrop-filter: blur(35px);
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  padding-bottom: 10vh;
+  padding-left: 0;
+}
+
+.open {
+  transform: translateX(0) !important;
+}
+
+.mobile__menu_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  list-style: none;
+  gap: 20px;
+}
+
+.mobile__menu_list a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 48px;
+  margin-bottom: 8px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.mobile__nav .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+
+  img {
+    max-width: 150px;
+
+    @include tablet() {
+      max-width: 250px;
+    }
+  }
+}
+
+.mobile__nav .btn {
+  @include button();
+
+  @include mobile() {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+}

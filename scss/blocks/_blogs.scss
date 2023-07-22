@@ -1,0 +1,134 @@
+.blogs {
+  padding: 130px 0;
+}
+
+.blogs .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.blogs .badgeTitle + h2 {
+  color: #1c1f35;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.blogs__wrapper {
+  max-width: 948px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog {
+  text-decoration: none;
+  color: #1c1f35;
+  display: flex;
+  gap: 20px;
+  padding: 30px 0;
+  border-top: 1px solid #d6d6d6;
+  max-height: 308px;
+
+  @include media() {
+    flex-direction: column;
+    max-height: unset;
+  }
+}
+
+.blog:hover > .blog__description h3,
+.blog:hover > .blog__description p {
+  color: #ffbe34;
+}
+
+.blog:last-child {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.blog > img {
+  object-fit: cover;
+  @include media() {
+    width: 100%;
+    max-height: 300px;
+  }
+}
+
+.blog__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media() {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.blog__date > img {
+  width: 52px;
+
+  @include media() {
+    width: 30px;
+  }
+}
+
+.blog__date .date__day {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+
+  @include media() {
+    font-size: 30px;
+  }
+}
+
+.blog__date .date__month {
+  color: #666c89;
+  text-align: center;
+  font-family: Krub;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+
+  @include media() {
+    font-size: 12px;
+  }
+}
+
+.blog__description {
+  padding-left: 30px;
+  border-left: 1px solid #d6d6d6;
+  overflow: scroll;
+
+  @include media() {
+    border-left: none;
+    border-top: 1px solid #d6d6d6;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+}
+
+.blog__description h3 {
+  transition: all 0.3s ease;
+  color: #1c1f35;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.blog__description > p {
+  margin: 10px 0;
+  transition: all 0.3s ease;
+
+  @include media() {
+    margin: 0;
+  }
+}

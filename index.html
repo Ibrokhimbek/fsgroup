@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FS Group LLC</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navigation">
+      <div class="navbar__top">
+        <div class="container">
+          <a href="/" class="navbar__logo">
+            <img src="./images/logo_light.svg" alt="FS Group LLC" />
+          </a>
+          <div class="navbar__contact">
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_clock.svg"
+                  alt="clock icon"
+                  width="22"
+                  height="22"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Mon - Sat 9.00 - 18.00</span>
+                <span>Sunday closed</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_email.svg"
+                  alt="email icon"
+                  width="20"
+                  height="15"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Email</span>
+                <span>contact@fsgroup.com</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_phone.svg"
+                  alt="phone icon"
+                  width="18"
+                  height="17"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Call Us</span>
+                <span>(00) 112 365 489</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+          </div>
+        </div>
+      </div>
+      <div class="navbar__bottom">
+        <div class="container">
+          <ul class="navbar__menu">
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/pages">How It Works?</a>
+            </li>
+            <li>
+              <a href="/projects">Transport Options</a>
+            </li>
+            <li>
+              <a href="/contact">Who We Serve</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/contact">Blog</a>
+            </li>
+          </ul>
+          <a href="/order" class="btn">Request Quote</a>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Mobile Nav -->
+    <div class="mobile__nav">
+      <div class="container">
+        <div class="burger__btn" id="burger">
+          <svg
+            class="hb"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 10 10"
+            stroke="#eee"
+            stroke-width=".6"
+            fill="rgba(0,0,0,0)"
+            stroke-linecap="round"
+            style="cursor: pointer"
+          >
+            <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+              <animate
+                dur="0.2s"
+                attributeName="d"
+                values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7"
+                fill="freeze"
+                begin="start.begin"
+              />
+              <animate
+                dur="0.2s"
+                attributeName="d"
+                values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7"
+                fill="freeze"
+                begin="reverse.begin"
+              />
+            </path>
+            <rect width="10" height="10" stroke="none">
+              <animate
+                dur="2s"
+                id="reverse"
+                attributeName="width"
+                begin="click"
+              />
+            </rect>
+            <rect width="10" height="10" stroke="none">
+              <animate
+                dur="0.001s"
+                id="start"
+                attributeName="width"
+                values="10;0"
+                fill="freeze"
+                begin="click"
+              />
+              <animate
+                dur="0.001s"
+                attributeName="width"
+                values="0;10"
+                fill="freeze"
+                begin="reverse.begin"
+              />
+            </rect>
+          </svg>
+        </div>
+        <div class="mobile__menu" id="menu">
+          <ul class="mobile__menu_list">
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/pages">How It Works?</a>
+            </li>
+            <li>
+              <a href="/projects">Transport Options</a>
+            </li>
+            <li>
+              <a href="/contact">Who We Serve</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/contact">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <a href="/" class="logo-container">
+          <img src="./images/logo_light.svg" alt="FS Group" />
+        </a>
+        <a href="/order" class="btn"><span>Get a Quote</span></a>
+      </div>
+    </div>
+    <!-- End of Mobile Nav -->
+
+    <h1 class="visually__hidden">
+      FS Group LLC: Nation’s Top-Rated Auto Transport Company
+    </h1>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="overlay">
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+          <div class="hero__content">
+            <h2>Logistics & Supply Chain Solutions</h2>
+            <p>WE SHIP CARS, SUVS, MOTORCYCLES</p>
+            <span>We drive. You save.</span>
+            <a href="/" class="btn__gold"><span>Request Quote</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Hero section -->
+
+    <!-- Testimonials section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2
+          class="testimonials__caption"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          Testimonials
+        </h2>
+
+        <div
+          class="swiper__controllers"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          <p>Over +1,000 satisfied customers and counting!</p>
+          <div class="controller__btns">
+            <button class="controller__button btn__left"></button>
+            <button class="controller__button btn__right"></button>
+          </div>
+        </div>
+
+        <div class="swiper">
+          <div
+            class="swiper-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <!-- Slide -->
+            <div class="swiper-slide reviewCard">
+              <div class="reviewCard__title">
+                <div class="reviewCard__who">
+                  <img src="./images/image_user.jpeg" alt="Username" />
+                  <div class="user__info">
+                    <h3>Kathleen Smith</h3>
+                    <span>Fuel Company</span>
+                  </div>
+                </div>
+                <img src="./images/icon_doubleQuotes.svg" alt="quotes icon" />
+              </div>
+              <div class="reviewCard__description">
+                <p>
+                  Leverage agile frameworks to provide a robust synopsis for
+                  strategy foster collaborative thinking to further the overall
+                  value proposition. Organically grow the holistic world view of
+                  disruptive innovation via workplace diversity and empowerment.
+                </p>
+                <div class="rate">
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                </div>
+              </div>
+            </div>
+            <!-- End of Slide -->
+            <!-- Slide -->
+            <div class="swiper-slide reviewCard">
+              <div class="reviewCard__title">
+                <div class="reviewCard__who">
+                  <img src="./images/image_user.jpeg" alt="Username" />
+                  <div class="user__info">
+                    <h3>Kathleen Smith</h3>
+                    <span>Fuel Company</span>
+                  </div>
+                </div>
+                <img src="./images/icon_doubleQuotes.svg" alt="quotes icon" />
+              </div>
+              <div class="reviewCard__description">
+                <p>
+                  Leverage agile frameworks to provide a robust synopsis for
+                  strategy foster collaborative thinking to further the overall
+                </p>
+                <div class="rate">
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                </div>
+              </div>
+            </div>
+            <!-- End of Slide -->
+            <!-- Slide -->
+            <div class="swiper-slide reviewCard">
+              <div class="reviewCard__title">
+                <div class="reviewCard__who">
+                  <img src="./images/image_user.jpeg" alt="Username" />
+                  <div class="user__info">
+                    <h3>Kathleen Smith</h3>
+                    <span>Fuel Company</span>
+                  </div>
+                </div>
+                <img src="./images/icon_doubleQuotes.svg" alt="quotes icon" />
+              </div>
+              <div class="reviewCard__description">
+                <p>
+                  Leverage agile frameworks to provide a robust synopsis for
+                  strategy foster collaborative thinking to further the overall
+                  value proposition. Organically grow the holistic world view of
+                </p>
+                <div class="rate">
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                  <img src="./images/icon_star.svg" alt="star" />
+                </div>
+              </div>
+            </div>
+            <!-- End of Slide -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Testimonials section -->
+
+    <!-- Why choose section -->
+    <div class="whyChoose">
+      <div class="container">
+        <span class="badgeTitle">Why choose</span>
+        <h2 class="whyChoose__title">Why choose FS Group</h2>
+
+        <div class="whyChoose__wrapper">
+          <div class="whyChoose__item" data-aos="fade-right">
+            <p>1000+</p>
+            <span class="cube"></span>
+            <h3>Clients Served</h3>
+          </div>
+          <div class="whyChoose__item" data-aos="fade-left">
+            <p>500+</p>
+            <span class="cube"></span>
+            <h3>Five star feedback</h3>
+          </div>
+          <div class="whyChoose__item" data-aos="fade-right">
+            <p>1500+</p>
+            <span class="cube"></span>
+            <h3>Vehicles Shipped</h3>
+          </div>
+          <div class="whyChoose__item" data-aos="fade-left">
+            <p>1+</p>
+            <span class="cube"></span>
+            <h3>Years In Operation</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Why choose section -->
+
+    <!-- Steps -->
+    <section class="steps">
+      <div class="container">
+        <div class="steps__wrapper">
+          <img
+            src="./images/steps__image.jpeg"
+            alt="3 easy steps"
+            data-aos="fade-down-right"
+          />
+          <div class="steps__description">
+            <span class="badgeTitle" data-aos="fade-down-left">
+              Three easy steps
+            </span>
+            <h2 data-aos="fade-down-right">
+              Ship your vehicle in 3 easy steps
+            </h2>
+            <ul class="steps__list">
+              <li class="steps__list-item" data-aos="fade-down-left">
+                <span>1</span>
+                <p>Quote & Reservation</p>
+              </li>
+              <li class="steps__list-item" data-aos="fade-down-left">
+                <span>2</span>
+                <p>Vehicle Pick-up</p>
+              </li>
+              <li class="steps__list-item" data-aos="fade-down-left">
+                <span>3</span>
+                <p>Vehicle Delivery</p>
+              </li>
+            </ul>
+            <a href="/" class="cta__btn" data-aos="fade-up">
+              <span>Request Quote</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Steps -->
+
+    <!-- Experts section -->
+    <div class="experts">
+      <div class="container">
+        <span class="exportsTitle">The Transporters</span>
+        <h2>Meet Expert Team</h2>
+        <div class="experts__wrapper">
+          <!-- Expert -->
+          <div class="expert__box">
+            <div class="contact">
+              <a href="tel:+998909706096">
+                <img
+                  src="./images/icon__phone.png"
+                  alt="phone icon"
+                  height="23"
+                />
+              </a>
+              <a href="mailto:ibrokhim.turaboev@gmail.com">
+                <img
+                  src="./images/icon__mail.png"
+                  alt="mail icon"
+                  height="23"
+                />
+              </a>
+            </div>
+            <h3>Jessca Arow</h3>
+            <span>Operator</span>
+          </div>
+          <!-- End of Expert -->
+          <!-- Expert -->
+          <div class="expert__box">
+            <div class="contact">
+              <a href="tel:+998909706096">
+                <img
+                  src="./images/icon__phone.png"
+                  alt="phone icon"
+                  height="23"
+                />
+              </a>
+              <a href="mailto:ibrokhim.turaboev@gmail.com">
+                <img
+                  src="./images/icon__mail.png"
+                  alt="mail icon"
+                  height="23"
+                />
+              </a>
+            </div>
+            <h3>Jessca Arow</h3>
+            <span>Operator</span>
+          </div>
+          <!-- End of Expert -->
+          <!-- Expert -->
+          <div class="expert__box">
+            <div class="contact">
+              <a href="tel:+998909706096">
+                <img
+                  src="./images/icon__phone.png"
+                  alt="phone icon"
+                  height="23"
+                />
+              </a>
+              <a href="mailto:ibrokhim.turaboev@gmail.com">
+                <img
+                  src="./images/icon__mail.png"
+                  alt="mail icon"
+                  height="23"
+                />
+              </a>
+            </div>
+            <h3>Jessca Arow</h3>
+            <span>Operator</span>
+          </div>
+          <!-- End of Expert -->
+          <!-- Expert -->
+          <div class="expert__box">
+            <div class="contact">
+              <a href="tel:+998909706096">
+                <img
+                  src="./images/icon__phone.png"
+                  alt="phone icon"
+                  height="23"
+                />
+              </a>
+              <a href="mailto:ibrokhim.turaboev@gmail.com">
+                <img
+                  src="./images/icon__mail.png"
+                  alt="mail icon"
+                  height="23"
+                />
+              </a>
+            </div>
+            <h3>Jessca Arow</h3>
+            <span>Operator</span>
+          </div>
+          <!-- End of Expert -->
+        </div>
+      </div>
+    </div>
+    <!-- End of Experts section -->
+
+    <!-- Get in Touch section -->
+    <div class="contact">
+      <div class="container contact__wrapper">
+        <div class="contact__info">
+          <span class="badgeTitle" data-aos="fade-up">Contact</span>
+          <h2 data-aos="fade-up">Get in touch with us</h2>
+          <!-- Contact item -->
+          <div class="navbar__contact-item" data-aos="fade-up">
+            <div class="contact-item_icon">
+              <img
+                src="./images/icon_email.svg"
+                alt="email icon"
+                width="20"
+                height="15"
+              />
+            </div>
+            <div class="contact-item_info">
+              <span>Email</span>
+              <span>contact@fsgroup.com</span>
+            </div>
+          </div>
+          <!-- End of Contact item -->
+
+          <!-- Contact item -->
+          <div class="navbar__contact-item" data-aos="fade-up">
+            <div class="contact-item_icon">
+              <img
+                src="./images/icon_phone.svg"
+                alt="phone icon"
+                width="18"
+                height="17"
+              />
+            </div>
+            <div class="contact-item_info">
+              <span>Call Us</span>
+              <span>(00) 112 365 489</span>
+            </div>
+          </div>
+          <!-- End of Contact item -->
+          <!-- Contact item -->
+          <div class="navbar__contact-item" data-aos="fade-up">
+            <div class="contact-item_icon">
+              <img
+                src="./images/icon_clock.svg"
+                alt="clock icon"
+                width="22"
+                height="22"
+              />
+            </div>
+            <div class="contact-item_info">
+              <span>Mon - Sat 9.00 - 18.00</span>
+              <span>Sunday closed</span>
+            </div>
+          </div>
+          <!-- End of Contact item -->
+        </div>
+        <form class="contact__form">
+          <input
+            class="contact__input"
+            type="text"
+            placeholder="Your name *"
+            name=""
+            id=""
+            required
+            data-aos="fade-up"
+          />
+          <input
+            class="contact__input"
+            type="email"
+            placeholder="Email *"
+            name=""
+            id=""
+            required
+            data-aos="fade-up"
+          />
+          <input
+            class="contact__input"
+            type="tel"
+            placeholder="Phone Number *"
+            name=""
+            id=""
+            required
+            data-aos="fade-up"
+          />
+          <input
+            class="contact__input"
+            type="text"
+            placeholder="City *"
+            name=""
+            id=""
+            required
+            data-aos="fade-up"
+          />
+          <textarea
+            class="contact__input"
+            name=""
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="Your Message..."
+            data-aos="fade-up"
+          ></textarea>
+          <button type="submit" class="submit__btn" data-aos="fade-right">
+            <span>Submit Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- End of Get in Touch section -->
+
+    <!-- Blogs section -->
+    <div class="blogs">
+      <div class="container">
+        <span class="badgeTitle">Our Blog</span>
+        <h2>Our Latest News</h2>
+
+        <div class="blogs__wrapper">
+          <!-- Blog -->
+          <a href="contact.html" class="blog">
+            <img src="./images/blog__img.jpeg" alt="Blog title" />
+            <div class="blog__date">
+              <img src="./images/icon__calendar.svg" alt="calendar" />
+              <span class="date__day">12</span>
+              <span class="date__month">September</span>
+            </div>
+            <div class="blog__description">
+              <h3>Inland freight a worthy solution for your business</h3>
+              <p>
+                We are dedicated in creating added value for our customers by
+                implementing modern technology in our work.
+                <br /><br />
+                - Urgent transport solutions <br />
+                - Reliable & experienced staffs <br />
+                - Urgent transport solutions <br />
+                - Reliable & experienced staffs <br />
+              </p>
+            </div>
+          </a>
+          <!-- End of Blog -->
+          <!-- Blog -->
+          <a href="contact.html" class="blog">
+            <img src="./images/blog__img.jpeg" alt="Blog title" />
+            <div class="blog__date">
+              <img src="./images/icon__calendar.svg" alt="calendar" />
+              <span class="date__day">12</span>
+              <span class="date__month">September</span>
+            </div>
+            <div class="blog__description">
+              <h3>Inland freight a worthy solution for your business</h3>
+              <p>
+                We are dedicated in creating added value for our customers by
+                implementing modern technology in our work.
+                <br /><br />
+                - Urgent transport solutions <br />
+                - Reliable & experienced staffs <br />
+                - Urgent transport solutions <br />
+                - Reliable & experienced staffs <br />
+              </p>
+            </div>
+          </a>
+          <!-- End of Blog -->
+          <!-- Blog -->
+          <a href="contact.html" class="blog">
+            <img src="./images/blog__img.jpeg" alt="Blog title" />
+            <div class="blog__date">
+              <img src="./images/icon__calendar.svg" alt="calendar" />
+              <span class="date__day">12</span>
+              <span class="date__month">September</span>
+            </div>
+            <div class="blog__description">
+              <h3>Inland freight a worthy solution for your business</h3>
+              <p>
+                We are dedicated in creating added value for our customers by
+                implementing modern technology in our work.
+                <br /><br />
+                - Urgent transport solutions <br />
+                - Reliable & experienced staffs <br />
+                - Urgent transport solutions <br />
+                - Reliable & experienced staffs <br />
+              </p>
+            </div>
+          </a>
+          <!-- End of Blog -->
+        </div>
+      </div>
+    </div>
+    <!-- End of Blogs section -->
+
+    <!-- FAQ section -->
+    <section class="faq">
+      <div class="container faq__wrapper">
+        <div class="faq__questions">
+          <span class="badgeTitle">FAQ</span>
+          <h2>Frequently Asked Questions</h2>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  How can I pay for your logistics services?
+                </button>
+              </h3>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Leverage agile frameworks to provide a robust synopsis for
+                  strategy foster collaborative thinking to further the overall
+                  value proposition. Organically grow the holistic world view of
+                  disruptive.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  What payment methods are supported ?
+                </button>
+              </h3>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Leverage agile frameworks to provide a robust synopsis for
+                  strategy foster collaborative thinking to further the overall
+                  value proposition. Organically grow the holistic world view of
+                  disruptive.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  What payment methods are supported ?
+                </button>
+              </h3>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Leverage agile frameworks to provide a robust synopsis for
+                  strategy foster collaborative thinking to further the overall
+                  value proposition. Organically grow the holistic world view of
+                  disruptive.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  What payment methods are supported ?
+                </button>
+              </h3>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Leverage agile frameworks to provide a robust synopsis for
+                  strategy foster collaborative thinking to further the overall
+                  value proposition. Organically grow the holistic world view of
+                  disruptive.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq__contact">
+          <span class="badgeTitle">Let's Talk</span>
+          <h3>You need any help? get free consultation</h3>
+          <!-- Contact item -->
+          <div class="navbar__contact-item">
+            <div class="contact-item_icon">
+              <img
+                src="./images/icon_phone.svg"
+                alt="phone icon"
+                width="18"
+                height="17"
+              />
+            </div>
+            <div class="contact-item_info">
+              <span>Have Any Questions</span>
+              <span>(00) 112 365 489</span>
+            </div>
+          </div>
+          <!-- End of Contact item -->
+          <a href="/" class="cta__btn"><span>Contact Us</span></a>
+        </div>
+      </div>
+    </section>
+    <!-- End of FAQ section -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__wrapper">
+        <a href="/">
+          <img src="./images/logo_light.svg" alt="FS Group" />
+        </a>
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_clock.svg"
+              alt="clock icon"
+              width="22"
+              height="22"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Mon - Sat 9.00 - 18.00</span>
+            <span>Sunday closed</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_email.svg"
+              alt="email icon"
+              width="20"
+              height="15"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Email</span>
+            <span>contact@fsgroup.com</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_phone.svg"
+              alt="phone icon"
+              width="18"
+              height="17"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Call Us</span>
+            <span>(00) 112 365 489</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <span>Copyright © FS Group | Powered by IMCON Group.</span>
+          <ul class="footer__nav">
+            <li>
+              <a href="/">Contact</a>
+            </li>
+            <li>
+              <a href="/">Term & Conditions</a>
+            </li>
+            <li>
+              <a href="/">Privacy & Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

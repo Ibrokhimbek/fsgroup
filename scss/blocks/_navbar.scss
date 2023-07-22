@@ -1,0 +1,128 @@
+.navigation {
+  background-color: rgba(9, 18, 66, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  @include media() {
+    display: none;
+  }
+}
+
+.navbar__top {
+  background-color: $blue-bg;
+}
+
+.navbar__top .container {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.navbar__contact {
+  display: flex;
+  gap: 30px;
+  color: $light-font;
+}
+
+.navbar__contact-item {
+  display: flex;
+  align-items: stretch;
+  gap: 17px;
+}
+
+.contact-item_icon {
+  width: 63px;
+  height: 63px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $border-color;
+  border-radius: 50%;
+  background-color: $light-blue-bg;
+  aspect-ratio: 1/1;
+
+  @include media() {
+    display: none;
+  }
+}
+
+.contact-item_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Krub", sans-serif;
+  font-size: 14px;
+}
+
+.navbar__bottom {
+  position: static;
+  top: 0;
+  z-index: 9999;
+}
+
+.navbar__bottom .container {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.navbar__menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+}
+
+.navbar__menu li a {
+  position: relative;
+  text-decoration: none;
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: $light-font;
+  padding: 24px 0;
+  display: block;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar__menu li a:hover,
+.active {
+  border-bottom: 2px solid $light-font !important;
+}
+
+.navbar__menu li:not(:last-child) a::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  right: -25px;
+  top: calc(50% - 10px);
+}
+
+.navbar__menu + a.btn {
+  background: $gold-gradient-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  color: #23212a;
+  font-family: "Krub", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 0 28px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #fff;
+  }
+}

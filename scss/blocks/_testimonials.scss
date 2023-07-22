@@ -1,0 +1,152 @@
+.testimonials {
+  padding: 85px 0;
+}
+
+.testimonials__caption {
+  @include badgeTitle;
+}
+
+.swiper__controllers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0 30px;
+
+  @include media() {
+    flex-direction: column;
+  }
+}
+
+.swiper__controllers p {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: $dark-font;
+}
+
+.controller__btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @include media() {
+    justify-content: space-between;
+    align-self: flex-end;
+  }
+}
+
+.controller__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-image: url(../../images/icon__arrow.svg);
+  background-size: contain;
+
+  &:hover {
+    background-image: url(../../images/icon__arrow-hover.svg);
+  }
+}
+
+.controller__btns .controller__button:nth-child(2) {
+  transform: rotate(180deg);
+}
+
+.swiper-slide {
+  max-height: 361px;
+}
+
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  padding: 30px 72px;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #091242;
+  }
+
+  &:hover > * {
+    color: white;
+  }
+
+  @include tablet() {
+    padding: 30px 20px;
+  }
+
+  @include mobile() {
+    padding: 15px;
+  }
+}
+
+.reviewCard__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviewCard__who {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.reviewCard__who > img {
+  width: 91px;
+  height: 91px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  @include media() {
+    width: 71px;
+    height: 71px;
+  }
+}
+
+.reviewCard__who + img {
+  @include media() {
+    display: none;
+  }
+}
+
+.reviewCard__who .user__info h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.reviewCard__who .user__info span {
+  font-family: "Krub", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 151.523%;
+}
+
+.reviewCard__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviewCard__description p {
+  max-height: 120px;
+  color: #666c89;
+  font-family: "Krub", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 151.523%; /* 24.244px */
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // overflow-y: scroll;
+}

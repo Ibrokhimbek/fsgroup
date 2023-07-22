@@ -1,0 +1,99 @@
+.contact {
+  padding: 143px 0;
+  background-color: $blue-bg;
+}
+
+.contact__page {
+  padding-top: 200px;
+  margin-top: 140px;
+  background-color: $light-blue-bg;
+}
+
+.contact__wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+
+  @include media() {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.contact .badgeTitle + h2 {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  margin-top: 13px;
+  margin-bottom: 32px;
+}
+
+.contact .navbar__contact-item {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.contact .contact__form {
+  max-width: 758px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @include media() {
+    width: 100%;
+  }
+}
+
+.contact__form > input {
+  width: 48%;
+  padding: 21px 29px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+
+  @include media() {
+    width: 100%;
+    padding: 19px 11px;
+    font-size: 16px;
+  }
+}
+
+.contact__form > textarea {
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  padding: 21px 29px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+
+  @include media() {
+    padding: 19px 11px;
+    font-size: 16px;
+  }
+}
+
+.contact__input {
+  outline: none;
+  border: none;
+  border: 1px solid #4e5683;
+  background-color: transparent;
+
+  &::placeholder {
+    color: #fff;
+  }
+
+  &:focus {
+    border: 1px solid #fff;
+  }
+}
+
+.contact .submit__btn {
+  @include button;
+}

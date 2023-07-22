@@ -1,0 +1,77 @@
+.experts {
+  padding: 150px 0;
+
+  @include media() {
+    padding: 50px 0;
+  }
+}
+
+.experts .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exportsTitle {
+  @include badgeTitle;
+}
+
+.exportsTitle + h2 {
+  margin-top: 20px;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.experts__wrapper {
+  display: flex;
+  gap: 42px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+
+  @include media() {
+    justify-content: space-around;
+  }
+}
+
+.expert__box {
+  position: relative;
+  background-color: #1c1f35;
+  display: inline-block;
+  min-width: 335px;
+  padding: 20px 34px;
+  padding-top: 42px;
+}
+
+.expert__box .contact {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background: $gold-gradient-bg;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  & > a img {
+    height: 23px;
+  }
+}
+
+.expert__box h3 {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.expert__box > span {
+  color: #fff;
+  font-family: Krub;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 151.523%;
+}
