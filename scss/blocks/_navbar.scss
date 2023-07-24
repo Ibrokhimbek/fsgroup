@@ -60,6 +60,16 @@
   font-size: 14px;
 }
 
+.contact__mail,
+.contact__phone {
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffb82b;
+  }
+}
+
 .navbar__bottom {
   position: static;
   top: 0;
