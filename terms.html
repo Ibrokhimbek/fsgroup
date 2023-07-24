@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FS Group LLC</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navigation">
+      <div class="navbar__top">
+        <div class="container">
+          <a href="/" class="navbar__logo">
+            <img src="./images/logo_light.svg" alt="FS Group LLC" />
+          </a>
+          <div class="navbar__contact">
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_clock.svg"
+                  alt="clock icon"
+                  width="22"
+                  height="22"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Mon - Sat 9.00 - 18.00</span>
+                <span>Sunday closed</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_email.svg"
+                  alt="email icon"
+                  width="20"
+                  height="15"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Email</span>
+                <span>contact@fsgroup.com</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_phone.svg"
+                  alt="phone icon"
+                  width="18"
+                  height="17"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Call Us</span>
+                <span>(00) 112 365 489</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+          </div>
+        </div>
+      </div>
+      <div class="navbar__bottom">
+        <div class="container">
+          <ul class="navbar__menu">
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/pages">How It Works?</a>
+            </li>
+            <li>
+              <a href="/projects">Transport Options</a>
+            </li>
+            <li>
+              <a href="/contact">Who We Serve</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/contact">Blog</a>
+            </li>
+          </ul>
+          <a href="/order" class="btn">Request Quote</a>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Mobile Nav -->
+    <div class="mobile__nav">
+      <div class="container">
+        <div class="burger__btn" id="burger">
+          <svg
+            class="hb"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 10 10"
+            stroke="#eee"
+            stroke-width=".6"
+            fill="rgba(0,0,0,0)"
+            stroke-linecap="round"
+            style="cursor: pointer"
+          >
+            <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+              <animate
+                dur="0.2s"
+                attributeName="d"
+                values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7"
+                fill="freeze"
+                begin="start.begin"
+              />
+              <animate
+                dur="0.2s"
+                attributeName="d"
+                values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7"
+                fill="freeze"
+                begin="reverse.begin"
+              />
+            </path>
+            <rect width="10" height="10" stroke="none">
+              <animate
+                dur="2s"
+                id="reverse"
+                attributeName="width"
+                begin="click"
+              />
+            </rect>
+            <rect width="10" height="10" stroke="none">
+              <animate
+                dur="0.001s"
+                id="start"
+                attributeName="width"
+                values="10;0"
+                fill="freeze"
+                begin="click"
+              />
+              <animate
+                dur="0.001s"
+                attributeName="width"
+                values="0;10"
+                fill="freeze"
+                begin="reverse.begin"
+              />
+            </rect>
+          </svg>
+        </div>
+        <div class="mobile__menu" id="menu">
+          <ul class="mobile__menu_list">
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/pages">How It Works?</a>
+            </li>
+            <li>
+              <a href="/projects">Transport Options</a>
+            </li>
+            <li>
+              <a href="/contact">Who We Serve</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/contact">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <a href="/" class="logo-container">
+          <img src="./images/logo_light.svg" alt="FS Group" />
+        </a>
+        <a href="/order" class="btn"><span>Get a Quote</span></a>
+      </div>
+    </div>
+    <!-- End of Mobile Nav -->
+
+    <!-- Caption section -->
+    <section
+      class="caption"
+      style="background-image: url(./images/steps__image.jpeg)"
+    >
+      <div class="layer">
+        <div class="container">
+          <span class="badgeTitle">Terms</span>
+          <h2>Terms & Conditions</h2>
+        </div>
+      </div>
+    </section>
+    <!-- End of Caption section -->
+
+    <section class="oneBlog">
+      <div class="container">
+        <h2>Terms and Conditions</h2>
+        <br>
+        <p>
+          1. The carrier and driver jointly and separately are authorized to
+          operate and transport his/her or their motor vehicle between its pick
+          up location and the destination set forth on the auto transport order
+          contract.
+          <br /><br />
+          2. Trucking damage claims are covered by carrier from $100,000 up to
+          $250,000 cargo insurance per load, and a minimum of 3/4 of a million
+          dollars public liability and property damage. All claims must be noted
+          and signed for at time of delivery, and submitted in writing within 15
+          days of delivery.
+          <br /><br />
+          3. LUGGAGE and personal property must be confined to trunk, with no
+          heavy articles, and not to exceed 100 lbs. Carrier is not liable for
+          damage caused to vehicle from excessive or improper loading of
+          personal items. For overseas shipments (including Hawaii) vehicles
+          must be empty, except for factory installed equipment. Any article
+          left in vehicle will be removed at shipper’s expense.
+          <br /><br />
+          4. The price quoted includes 6% discount for cash payment, (credit
+          card customers and billing accounts will be charged full amount). Pick
+          up and delivery is from your door unless residential area restrictions
+          apply. Pick ups by appointment are available for an additional fee, by
+          smaller unrestricted auto carriers.
+          <br /><br />
+          5. Vehicles must be tendered to carrier in good running condition with
+          no more than a half tank of fuel. Carrier will not be liable for
+          damage caused by leaking fluids, freezing, exhaust systems, or
+          antennas not tied down. Any claim for loss or damage must be noted and
+          signed on condition report at time of delivery
+          <br /><br />
+          6. If a carrier is sent out and the vehicle isn’t ready as indicated
+          by the shipper there will be an additional $75.00 rescheduling fee. FS
+          Group LLC. must be notified, should the shipper be unavailable for
+          pick up or delivery, the shipper must have an alternate representative
+          take his/her place as shipper. If for any reason the vehicle becomes
+          unavailable during a scheduled pick up window, after an order has been
+          placed, US Star Trucking LLC. has the right to cancel the order with
+          no refund.
+          <br /><br />
+          7. FS Group LLC agrees to provide a carrier to transport your vehicle
+          as promptly as possible in accordance with your instructions but
+          cannot guarantee pick-up or delivery on a specified date. An
+          administration fee of $200 will be charged for orders canceled prior
+          to one week after the requested available pick up FS Group LLC does
+          not agree to pay for your rental of a vehicle, nor shall it be liable
+          for failure of mechanical or operating parts of your vehicle.
+          <br /><br />
+          8. A $150.00 non-operational fee will be charged for all non-running
+          vehicles. This will be included in the final quote received from FS
+          Group LLC. If the vehicle becomes non-operational during transport,
+          this fee will be applied to the original quote.
+          <br /><br />
+          9. Shipper warrants that he will pay the price quoted due FS Group LLC
+          for delivered vehicles, and will not seek to charge back a credit
+          card. This agreement and any shipment here under is subject to all
+          terms and conditions of the carrier’s tariff and the uniform straight
+          bill of lading, copies of which are available at the office of the
+          carrier FS Group Department of Transportation Broker’s license
+          MC-1554932. This supersedes all prior written or oral representation
+          of FS Group LLC and constitutes the entire agreement between shipper
+          and FS Group and may not be changed except in writing signed by an
+          officer of FS Group LLC.
+          <br /><br />
+          FS Group has authorization to cancel order at anytime.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__wrapper">
+        <a href="/">
+          <img src="./images/logo_light.svg" alt="FS Group" />
+        </a>
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_clock.svg"
+              alt="clock icon"
+              width="22"
+              height="22"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Mon - Sat 9.00 - 18.00</span>
+            <span>Sunday closed</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_email.svg"
+              alt="email icon"
+              width="20"
+              height="15"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Email</span>
+            <span>contact@fsgroup.com</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_phone.svg"
+              alt="phone icon"
+              width="18"
+              height="17"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Call Us</span>
+            <span>(00) 112 365 489</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <span>Copyright © FS Group | Powered by IMCON Group.</span>
+          <ul class="footer__nav">
+            <li>
+              <a href="/">Contact</a>
+            </li>
+            <li>
+              <a href="/">Term & Conditions</a>
+            </li>
+            <li>
+              <a href="/">Privacy & Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

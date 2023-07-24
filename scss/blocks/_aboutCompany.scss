@@ -1,0 +1,89 @@
+.aboutCompany {
+  margin: 100px 0;
+}
+
+.about__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+
+  @include media() {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+.about__wrapper img {
+  width: 50%;
+
+  @include tablet() {
+    width: 80%;
+  }
+
+  @include mobile() {
+    width: 100%;
+  }
+}
+
+.aboutCompany__info .badgeTitle + h2 {
+  color: #1c1f35;
+  text-align: left;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: normal;
+  margin: 10px 0;
+}
+
+.aboutCompany__info p {
+  color: #666c89 !important;
+  font-family: "Krub", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 151.523%;
+}
+
+.infoBtnGroup {
+  display: flex;
+  gap: 14px;
+
+  @include mobile() {
+    justify-content: space-between;
+  }
+
+  .infoBtn {
+    color: #1c1f35;
+    font-family: "Krub", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 151.523%;
+    padding: 15px 30px;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+
+    @include mobile() {
+      font-size: 14px;
+      white-space: nowrap;
+      padding: 10px 20px;
+    }
+  }
+
+  .infoBtn.active,
+  .infoBtn:hover {
+    background-color: #ffb82b;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.aspect {
+  display: none;
+}
+
+.show {
+  display: block;
+}

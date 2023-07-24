@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FS Group LLC</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navigation">
+      <div class="navbar__top">
+        <div class="container">
+          <a href="/" class="navbar__logo">
+            <img src="./images/logo_light.svg" alt="FS Group LLC" />
+          </a>
+          <div class="navbar__contact">
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_clock.svg"
+                  alt="clock icon"
+                  width="22"
+                  height="22"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Mon - Sat 9.00 - 18.00</span>
+                <span>Sunday closed</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_email.svg"
+                  alt="email icon"
+                  width="20"
+                  height="15"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Email</span>
+                <span>contact@fsgroup.com</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+            <!-- Contact item -->
+            <div class="navbar__contact-item">
+              <div class="contact-item_icon">
+                <img
+                  src="./images/icon_phone.svg"
+                  alt="phone icon"
+                  width="18"
+                  height="17"
+                />
+              </div>
+              <div class="contact-item_info">
+                <span>Call Us</span>
+                <span>(00) 112 365 489</span>
+              </div>
+            </div>
+            <!-- End of Contact item -->
+          </div>
+        </div>
+      </div>
+      <div class="navbar__bottom">
+        <div class="container">
+          <ul class="navbar__menu">
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/pages">How It Works?</a>
+            </li>
+            <li>
+              <a href="/projects">Transport Options</a>
+            </li>
+            <li>
+              <a href="/contact">Who We Serve</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/contact">Blog</a>
+            </li>
+          </ul>
+          <a href="/order" class="btn">Request Quote</a>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Mobile Nav -->
+    <div class="mobile__nav">
+      <div class="container">
+        <div class="burger__btn" id="burger">
+          <svg
+            class="hb"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 10 10"
+            stroke="#eee"
+            stroke-width=".6"
+            fill="rgba(0,0,0,0)"
+            stroke-linecap="round"
+            style="cursor: pointer"
+          >
+            <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+              <animate
+                dur="0.2s"
+                attributeName="d"
+                values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7"
+                fill="freeze"
+                begin="start.begin"
+              />
+              <animate
+                dur="0.2s"
+                attributeName="d"
+                values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7"
+                fill="freeze"
+                begin="reverse.begin"
+              />
+            </path>
+            <rect width="10" height="10" stroke="none">
+              <animate
+                dur="2s"
+                id="reverse"
+                attributeName="width"
+                begin="click"
+              />
+            </rect>
+            <rect width="10" height="10" stroke="none">
+              <animate
+                dur="0.001s"
+                id="start"
+                attributeName="width"
+                values="10;0"
+                fill="freeze"
+                begin="click"
+              />
+              <animate
+                dur="0.001s"
+                attributeName="width"
+                values="0;10"
+                fill="freeze"
+                begin="reverse.begin"
+              />
+            </rect>
+          </svg>
+        </div>
+        <div class="mobile__menu" id="menu">
+          <ul class="mobile__menu_list">
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/pages">How It Works?</a>
+            </li>
+            <li>
+              <a href="/projects">Transport Options</a>
+            </li>
+            <li>
+              <a href="/contact">Who We Serve</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/contact">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <a href="/" class="logo-container">
+          <img src="./images/logo_light.svg" alt="FS Group" />
+        </a>
+        <a href="/order" class="btn"><span>Get a Quote</span></a>
+      </div>
+    </div>
+    <!-- End of Mobile Nav -->
+
+    <!-- Caption section -->
+    <section
+      class="caption"
+      style="background-image: url(./images/steps__image.jpeg)"
+    >
+      <div class="layer">
+        <div class="container">
+          <span class="badgeTitle">Privacy</span>
+          <h2>Privacy & Policy</h2>
+        </div>
+      </div>
+    </section>
+    <!-- End of Caption section -->
+
+    <section class="oneBlog">
+      <div class="container">
+        <h2>Privacy and Policy</h2>
+        <p>
+          Welcome! Here at FS Group we know that privacy is important to you and
+          to us. In order to provide you (the individual inquiring about our
+          services about accessing our site) with the best service and most
+          accurate pricing, FS Group collects information about you, and we, in
+          some cases, may share that information with necessary parties.
+          <br /><br />
+          The following privacy policy explains exactly what information we
+          collect, why we collect it, and who we share it with, as well as how
+          we keep it protected. You are also recommended to read our Terms of
+          Use to understand the general rules about your use of this Site, and
+          any additional terms that may apply when you access particular
+          services or materials on certain areas of this Site. While using our
+          website and its content, you are agreeing to and consenting to the
+          most recent version of this Policy.
+          <br /><br />
+          “We,” “our” means FS Group and its affiliates. “You,” “your,”
+          ”visitor,” or “user” means the individual accessing this site and our
+          services. Minors This Site is not intended for children use. If you
+          are a minor (under the age of 18), you can use this service only with
+          the consent of your parents or legal guardians. If you are a minor,
+          please do not submit any personal information to this Site.<strong>
+            IF YOU ARE 13 YEARS OR YOUNGER, PLEASE DO NOT USE THIS SITE OR ANY
+            OF ITS SERVICES FOR ANY PURPOSE AT ANY TIME.</strong
+          >This Site is not intended for any children under the age of 13. Your
+          Personal Information Your personal information is what identifies you
+          as a person, such as your name, phone number, home or work addresses,
+          etc. We ask for these things when quoting and/or booking your order.
+          Your Use of Our Site We track an algorithm of information about you,
+          basing the algorithm off of your use of our website; your demography,
+          diversion, and behaviors are used to better recognize and provide our
+          potential clientele with knowledgeable information. With this, the
+          information is inspected and collected on a gross basis. I.e,., the
+          webpage you were previously on, the webpage you go to next, your
+          specific browser, IP address, and others. Your Reviews and Posts If
+          you decide to disclose your information on our website, we may collect
+          your information if you leave a review on our website or any of our
+          review sites, such as Google. Your Correspondence By sending us text
+          messages, emails, or other forms of personal communication, or if
+          third parties send us information about a post from you, we may use
+          that information in a specific file for you. What do we do with Your
+          Information To provide services to you FS Group uses your information
+          to provide you with our services to the best of our ability for normal
+          operations; none of your information is disclosed to others or sold by
+          FS Group for any reason under any circumstance. If you do not give us
+          the information we need, we would not be able to provide you with any
+          services. Administrative Notices Your data such as your e-mail
+          address, your mailing address, and phone number are used to contact
+          you regarding administrative notices, new product offerings, and
+          communications relevant to your use of the Site. If wish to NO LONGER
+          receive these communications, please contact FS Group LLC at
+          dispatch@fsgroups.us Consent By submitting your phone number and
+          clicking submit, you agree to our Terms and Privacy Policy and permit
+          us to send or start automated sales calls, text messages, and
+          prerecorded voicemails to that phone number. Your consent is not
+          required in order to purchase any items, commodities, or services.
+          Rates for messages and data use may apply. Dispute Resolution We make
+          use of the information in our file on you, as well as information
+          about your current and previous activity on the Site, to resolve
+          disputes, troubleshoot issues, and enforce our Site Terms of Use. Our
+          Disclosure to Third Parties We understand the value of privacy and
+          take reasonable steps to safeguard it. We never sell or give away any
+          of your personal information. The following are some examples of how
+          your personal information may be shared: Your personally identifiable
+          information is not shared with third parties unless you give us
+          permission to do so. By submitting an order - If you want to modify,
+          amend, or delete your personal information, you may do so by visiting
+          our website's "Contact Us" page. - You have the option of granting us
+          permission to disclose your information or opting in/out of subsequent
+          sharing. - Our business is subject to the US Federal Trade
+          Commission's examination and enforcement procedure. - We must provide
+          any and all information to public authorities, national security, and
+          law enforcement in the case of a legal proceeding. - At the moment of
+          delivery, we must disclose your personal information to third parties
+          (phone numbers, addresses, and names, for example) (transport
+          carriers). This will be communicated to you both during the collection
+          of your data and prior to its publication. Law Enforcement In the case
+          of a legal situation involving us (fraud, informal copyright, etc. ),
+          we reserve the right to disclose any personal information about you
+          that we believe is required or relevant. Advertisers We may share
+          information about our users with our advertisers for marketing
+          reasons; however, none of this information is personal information
+          about you and will not be sold or solicited. No Spam Both us and our
+          customers have a zero-tolerance policy for spam. Without limiting the
+          above, you are not permitted to add a FS Group LLC user to your
+          mailing list (e-mail or physical mail) without first obtaining their
+          explicit agreement after proper disclosure. Disclosures You Make to
+          Third Parties FS Group LLC will take great efforts to safeguard any
+          kind of personal information. FS Group LLC cannot ensure total
+          security and is not responsible or accountable for any personal data
+          disclosures, including but not limited to data transfer failures,
+          hackers, or errors caused by FS Group LLC. For instance, any third
+          party might get unauthorized access to your information using our
+          website. What You Can Do about Your Personal Information You have
+          certain rights relating to your personal data, subject to local data
+          protection laws. Depending on the applicable laws and, in particular,
+          if you are located in the EEA, these rights may include: - To access
+          your Personal Data held by us (right to access); - To rectify
+          inaccurate Personal Data and, taking into account the purpose of
+          processing the Personal Data, ensure it is complete (right to
+          rectification); - To erase/delete your Personal Data, to the extent
+          permitted by applicable data protection laws (right to erasure; right
+          to be forgotten); - To restrict our processing of your Personal Data,
+          to the extent permitted by law (right to restriction of processing);
+          To transfer your Personal Data to another controller, to the extent
+          possible (right to data portability); - To object to any processing of
+          your Personal Data carried out on the basis of our legitimate
+          interests (right to object). Where we process your Personal Data for
+          direct marketing purposes or share it with third parties for their own
+          direct marketing purposes, you can exercise your right to object at
+          any time to such processing without having to provide any specific
+          reason for such objection; - Not to be subject to a decision based
+          solely on automated processing, including profiling, which produces
+          legal effects ("Automated Decision-Making"). Automated Decision-Making
+          currently does not take place on our Sites; and - To the extent we
+          base the collection, processing and sharing of your Personal Data on
+          your consent, to withdraw your consent at any time, without affecting
+          the lawfulness of the processing based on such consent before its
+          withdrawal. Any and all questions, comments, concerns, and requests
+          can be sent to [dispatch@fsgroups.us] Governing Law This Privacy
+          Policy shall be governed by the laws of the State of Ohio without
+          regard to its conflict of laws principles.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__wrapper">
+        <a href="/">
+          <img src="./images/logo_light.svg" alt="FS Group" />
+        </a>
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_clock.svg"
+              alt="clock icon"
+              width="22"
+              height="22"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Mon - Sat 9.00 - 18.00</span>
+            <span>Sunday closed</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_email.svg"
+              alt="email icon"
+              width="20"
+              height="15"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Email</span>
+            <span>contact@fsgroup.com</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+        <!-- Contact item -->
+        <div class="navbar__contact-item">
+          <div class="contact-item_icon">
+            <img
+              src="./images/icon_phone.svg"
+              alt="phone icon"
+              width="18"
+              height="17"
+            />
+          </div>
+          <div class="contact-item_info">
+            <span>Call Us</span>
+            <span>(00) 112 365 489</span>
+          </div>
+        </div>
+        <!-- End of Contact item -->
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <span>Copyright © FS Group | Powered by IMCON Group.</span>
+          <ul class="footer__nav">
+            <li>
+              <a href="/">Contact</a>
+            </li>
+            <li>
+              <a href="/">Term & Conditions</a>
+            </li>
+            <li>
+              <a href="/">Privacy & Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+.notFound {
+  margin-top: 140px;
+  padding: 100px 0;
+
+  @include tablet() {
+    margin-top: 100px;
+  }
+
+  @include mobile() {
+    margin-top: 90px;
+  }
+}
+
+.notFound h2 {
+  color: #1c1f35;
+  text-align: center;
+  font-size: calc(50px + 15vw);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.notFound .yellow {
+  color: #ffb82b;
+}
+
+.notFound .btn {
+  @include button();
+}

@@ -22,3 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1000,
   });
 });
+
+const buttons = document.querySelectorAll(".infoBtn");
+
+buttons.forEach((button, index) => {
+  button.addEventListener("click", function () {
+    buttons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    this.classList.add("active");
+
+    const aspects = document.querySelectorAll(".aspect");
+
+    aspects.forEach((aspect) => {
+      aspect.classList.remove("show");
+    });
+    aspects[index].classList.add("show");
+  });
+});
