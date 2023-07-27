@@ -64,8 +64,10 @@
 .reviewCard {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 24px;
   max-width: 600px;
+  min-height: 359px;
   padding: 30px 72px;
   background-color: #f4f4f4;
   transition: all 0.3s ease;
@@ -142,6 +144,8 @@
 .reviewCard__description {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
   gap: 20px;
 }
 
