@@ -69,6 +69,7 @@
   padding: 30px 72px;
   background-color: #f4f4f4;
   transition: all 0.3s ease;
+  text-decoration: none;
 
   &:hover {
     background-color: #091242;
@@ -76,6 +77,11 @@
 
   &:hover > * {
     color: white;
+  }
+
+  &:hover .user__info h3,
+  &:hover .user__info span {
+    color: #f4f4f4;
   }
 
   @include tablet() {
@@ -119,6 +125,8 @@
 .reviewCard__who .user__info h3 {
   font-size: 20px;
   font-weight: 500;
+  color: #091242;
+  transition: all 0.3s ease;
 }
 
 .reviewCard__who .user__info span {
@@ -127,6 +135,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: 151.523%;
+  color: #091242;
+  transition: all 0.3s ease;
 }
 
 .reviewCard__description {
