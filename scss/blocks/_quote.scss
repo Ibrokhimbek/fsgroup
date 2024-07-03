@@ -1,0 +1,108 @@
+.quote__modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.466);
+
+  @include mobile() {
+    justify-content: flex-start;
+    padding-block: 100px;
+    overflow-y: scroll;
+  }
+}
+
+.quote__modal_wrapper {
+  background-color: white;
+
+  @include mobile() {
+    max-width: 90%;
+  }
+}
+
+.steps__forms {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.steps__forms form {
+  padding: 30px 100px;
+
+  @include mobile() {
+    padding: 30px 20px;
+  }
+}
+
+.two.fields {
+  gap: 30px;
+
+  @include mobile() {
+    gap: 0;
+  }
+}
+
+.step__btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.stepBtn {
+  @include button();
+  font-size: 14px;
+  border: 1px solid rgb(214, 174, 81);
+  padding: 5px 20px;
+  float: right;
+}
+
+.quote__result ul {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.quote__result ul li {
+  padding: 5px;
+  border: 1px solid goldenrod;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ui.steps .step:after {
+  @include mobile() {
+    display: none !important;
+  }
+}
+
+.fields {
+  @include mobile() {
+    flex-direction: column !important;
+  }
+}
+
+.steps {
+  @include mobile() {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border: none !important;
+  }
+}
+
+.step {
+  @include mobile() {
+    width: 100% !important;
+    padding: 10px 0;
+    justify-content: flex-start !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+}

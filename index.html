@@ -11,6 +11,9 @@
     />
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/semantic.min.css" />
+    <link rel="stylesheet" href="./css/form.min.css" />
+    <link rel="stylesheet" href="./css/dropdown.min.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -191,24 +194,226 @@
     </div>
     <!-- End of Mobile Nav -->
 
-    <h1 class="visually__hidden">
+    <h1 class="visually-hidden">
       FS Group LLC: Nation’s Top-Rated Auto Transport Company
     </h1>
 
     <!-- Hero section -->
     <section class="hero">
       <div class="overlay">
-        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+        <div
+          class="container hero__wrapper"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <div class="hero__content">
             <h2>Logistics & Supply Chain Solutions</h2>
             <p>WE SHIP CARS, SUVS, MOTORCYCLES</p>
             <span>We drive. You save.</span>
             <a href="/" class="btn__gold"><span>Request Quote</span></a>
           </div>
+          <form class="quote__form" id="quoteForm">
+            <div class="ui form">
+              <div class="field" id="fromWrapper">
+                <label class="requiredLabel">Transport FROM</label>
+                <select class="ui search from dropdown" id="fromList">
+                  <option value="">Zip or City</option>
+                </select>
+              </div>
+              <div class="field" id="toWrapper">
+                <label class="requiredLabel">Transport TO</label>
+                <select class="ui search to dropdown" id="toList">
+                  <option value="">Zip, City or Country</option>
+                </select>
+              </div>
+              <div class="inline field">
+                <div class="ui checkbox">
+                  <input
+                    id="terms"
+                    type="checkbox"
+                    tabindex="0"
+                    class="hidden"
+                  />
+                  <label for="terms"
+                    >By checking this box, you agree to our Terms and Privacy
+                    Policy, allowing us to send automated sales text messages to
+                    the provided phone number. Your consent is not required for
+                    purchasing any items, commodities, or services. Message and
+                    data rates may apply</label
+                  >
+                </div>
+              </div>
+              <div>
+                <button class="quote__form__btn disabled">
+                  <span>Get shipping estemate - Free</span>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
     <!-- End of Hero section -->
+
+    <!-- Quote modal -->
+    <div class="quote__modal visually-hidden">
+      <div class="quote__modal_wrapper">
+        <div class="ui ordered unstackable steps">
+          <div class="completed step" id="quote__step_1">
+            <div class="content">
+              <div class="title">Information</div>
+            </div>
+          </div>
+          <div class="active step myStep" id="quote__step_2">
+            <div class="content">
+              <div class="title">Transportation</div>
+            </div>
+          </div>
+          <div class="active step myStep" id="quote__step_3">
+            <div class="content">
+              <div class="title">Vehicle</div>
+            </div>
+          </div>
+          <div class="active step myStep" id="quote__step_4">
+            <div class="content">
+              <div class="title">Contact</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps__forms">
+          <form class="ui form" id="quoteStep_0">
+            <div class="two fields">
+              <div class="field">
+                <label class="requiredLabel">Transportation Type</label>
+                <div class="ui selection dropdown transportationType">
+                  <input type="hidden" />
+                  <i class="dropdown icon"></i>
+                  <div class="default text">Select</div>
+                  <div class="menu">
+                    <div class="item" data-value="Open">Open</div>
+                    <div class="item" data-value="Enclosed">Enclosed</div>
+                    <div class="item" data-value="Driveaway">Driveaway</div>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="requiredLabel">Estimated Ship Date</label>
+                <input type="date" />
+              </div>
+            </div>
+            <div class="step__btns">
+              <button type="button" onclick="previousStep()" class="stepBtn">
+                <span>Cancel</span>
+              </button>
+              <button class="stepBtn">
+                <span>Next</span>
+              </button>
+            </div>
+          </form>
+          <form class="ui form visually-hidden" id="quoteStep_1">
+            <div class="two fields">
+              <div class="field">
+                <label class="requiredLabel">Vehicle Runs</label>
+                <div class="ui selection dropdown transportationType">
+                  <input type="hidden" />
+                  <i class="dropdown icon"></i>
+                  <div class="default text">Select one</div>
+                  <div class="menu">
+                    <div class="item" data-value="Yes">Yes</div>
+                    <div class="item" data-value="No">No</div>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="requiredLabel">Year</label>
+                <div class="ui selection dropdown transportationType">
+                  <input type="hidden" />
+                  <i class="dropdown icon"></i>
+                  <div class="default text">Select one</div>
+                  <div class="menu" id="carMenu"></div>
+                </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label class="requiredLabel">Make</label>
+                <div class="ui selection dropdown makeType">
+                  <input type="hidden" onchange="return updateBrands(event)" />
+                  <i class="dropdown icon"></i>
+                  <div class="default text">Select one</div>
+                  <div class="menu" id="carMakes"></div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="requiredLabel">Model</label>
+                <div class="ui selection dropdown brandType">
+                  <input type="hidden" />
+                  <i class="dropdown icon"></i>
+                  <div class="default text">Select one</div>
+                  <div class="menu" id="carBrands"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step__btns">
+              <button type="button" onclick="previousStep()" class="stepBtn">
+                <span>Previous</span>
+              </button>
+              <button class="stepBtn">
+                <span>Next</span>
+              </button>
+            </div>
+          </form>
+          <form class="ui form visually-hidden" id="quoteStep_2">
+            <div class="fields">
+              <div class="field">
+                <label class="requiredLabel">First name</label>
+                <div class="ui input">
+                  <input type="text" placeholder="Please enter" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="requiredLabel">Last name</label>
+                <div class="ui input">
+                  <input type="text" placeholder="Please enter" />
+                </div>
+              </div>
+            </div>
+            <div class="fields">
+              <div class="field">
+                <label class="requiredLabel">Phone number</label>
+                <div class="ui input">
+                  <input type="tel" placeholder="+1 123 456 7890" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="requiredLabel">Email</label>
+                <div class="ui input">
+                  <input type="email" required placeholder="Please enter" />
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label>Comment</label>
+              <textarea></textarea>
+            </div>
+            <div class="quote__result">
+              <ul id="quoteTable"></ul>
+            </div>
+
+            <div class="step__btns">
+              <button type="button" onclick="previousStep()" class="stepBtn">
+                <span>Previous</span>
+              </button>
+              <button class="stepBtn">
+                <span>Submit</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End of Quote modal -->
 
     <!-- Testimonials section -->
     <section class="testimonials">
@@ -915,6 +1120,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/semantic.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

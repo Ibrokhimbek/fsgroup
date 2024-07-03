@@ -18,15 +18,20 @@
     top: calc(-25px);
     left: calc(-25px);
     background-color: #fff;
-    width: calc(100% + 50px);
-    height: calc(100% + 50px);
+    width: calc(100% + 70px);
+    height: calc(100% + 70px);
     border-radius: 50%;
     transition: all 0.6s ease;
-    transform: translateX(70%) translateY(30%);
+    transform: translateX(60%) translateY(20%);
   }
 
   &:hover::after {
     transform: translateX(0) translateY(0);
+    border-radius: 0;
+  }
+
+  &:hover {
+    color: black;
   }
 
   & > span {
